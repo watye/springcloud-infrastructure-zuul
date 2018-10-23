@@ -1,0 +1,18 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: 123456
+        
+#日志配置
+logging:
+  file: springcloud-zuul.log
+  level.org.springframework.web: info
+  debug: false
+
+zuul:
+  routes:
+    api-springcloud-provider:
+      path: /api-springcloud-provider/**
+      serviceId: springcloud-provider
